@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Formulario de contacto</title>
+		<style type="text/css">
+	
+		* {
+	font-family: Verdana;
+	padding: 0;
+	}
+	
+	@media (max-width: 1024px) {
+	fieldset:first-of-type div{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	h1 {
+		margin-left: 240px;
+	}
+	}
+	
+	body {
+	background-color: #cedfef;
+	}
+
+	h1 {
+	text-align: center;
+	margin-right: 250px;
+	font-variant: small-caps;
+	}
+
+	fieldset {
+	width: 500px;
+	border-style: solid;
+}
+
+	form {
+	background-color: SteelBlue;
+	max-width: 550px;
+	height: 650px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 25px;
+	box-shadow: 0px 0px 10px #ffffff;
+	border-style: solid;
+	border-color: LightSteelBlue;
+	margin: 0 auto;
+	color: white;
+	}
+
+input.Apellidos{
+display: flex;
+justify-content: flex-end;
+width: 300px;
+}
+
+input.Nombre{
+display: flex;
+justify-content: flex-end;
+width: 300px;
+}
+
+input.Edad{
+	display: flex;
+	justify-content: flex-end;
+	width: 300px;
+}
+
+input.Telefono{
+	display: flex;
+	justify-content: flex-end;
+	width: 300px;
+}
+
+input.Email{
+	display: flex;
+	justify-content: flex-end;
+	width: 300px;
+}
+
+.DatosPersonales div{
+	display: flex;
+	margin-bottom: 10px;
+	justify-content: space-between;
+	margin-right: 10px;
+}
+
+label{
+	margin-left: 10px;
+}
+
+.Contacto label {
+	margin-top: 5px;
+	}
+
+fieldset {
+	margin-right:10px;
+	margin-bottom:10px;
+	margin-left:10px;
+	padding-top:10px;
+}
+
+.Botones {
+	padding-bottom:10px;
+	margin-left: 10px;
+}
+textarea .texto {
+	font-style: bold;
+}
+
+.Productos select {
+margin-left: 10px;
+margin-right: 20px;
+}
+
+select {
+	width: 450px;
+	margin-bottom: 15px;
+}
+
+fieldset:nth-of-type(2) div {
+	padding-bottom: 5px;
+	padding-left: 20px;
+}
+
+legend {
+	margin-left: 10px;
+}
+
+fieldset:first-of-type input{
+	border-radius: 5px;
+}
+
+input:required {
+	border-color: red;
+}
+
+#botones {
+	display:flex;
+	justify-content: space-around;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+
+</style>
+	</head>
+	<body>
+		<header>
+			<h1>Formulario de contacto</h1>
+		</header>
+
+		<form>
+			<fieldset class="DatosPersonales">
+				<legend>Datos personales</legend>
+
+				<div><label>Apellidos:</label> <input type="text" required class="Apellidos"
+						name="Apellidos" id="Apellidos" /></div>
+
+				<div><label>Nombre: </label> <input type="text" required class="Nombre"
+						name="Nombre"
+						id="Nombre" /></div>
+
+				<div><label>Edad: </label> <input type="text" class="Edad" name="Edad"
+						id="Edad" /></div>
+
+				<div><label>Teléfono: </label><input type="tel" class="Telefono"
+						name="Telefono" id="Telefono" /></div>
+
+				<div><label>Email: </label><input type="email" class="Email" name="Email"
+						id="Email" /></div>
+			</fieldset>
+
+			<fieldset class="Productos">
+				<label>Productos que te interesan</label>
+				<select name="productos" size="9" multiple>
+					<optgroup label="Raquetas">
+						<option>Padel</option>
+						<option>Tenis</option>
+						<option>Badminton</option>
+						<option>Tenis de mesa</option>
+					</optgroup>
+
+					<optgroup label="Raquetero">
+						<option>Padel</option>
+						<option>Tenis</option>
+						<option>Badminton</option>
+					</optgroup>
+				</select>
+
+				<div>
+					<input type="checkbox" name="hagodeporte" id="hagodeporte" />
+					<label for="hagodeporte">Practico deporte habitualmente</label>
+				</div>
+				<div>
+					<input type="checkbox" name="fumo" id="fumo" />
+					<label for="fumo">Fumo</label>
+				</div>
+			</fieldset>
+
+			<fieldset class="Contacto">
+				<label>¿Quieres que contactemos contigo? ¿Cómo?:</label>
+				<div id="botones">
+					<input type="radio" name="telefono" id="telefono" value="telefono" />
+					<label for="telefono">Sí, por teléfono</label>
+					<input type="radio" name="email" id="email" value="email" />
+					<label for="email">Sí, por email</label>
+					<input type="radio" name="negativo" id="negativo" value="negativo" />
+					<label for="negativo">No</label>
+				</div>
+			</fieldset>
+
+			<fieldset class="Botones">
+				<input type="reset" value="Limpiar" id="limpiar" />
+				<input type="submit" value="Enviar" id="enviar" />
+			</fieldset>
+		</form>
+	</body>
+</html>

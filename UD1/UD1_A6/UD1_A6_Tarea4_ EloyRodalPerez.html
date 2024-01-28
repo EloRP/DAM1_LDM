@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Formulario de contacto</title>
+		<style type="text/css">
+				* {
+	font-family: Verdana;
+	padding: 0;
+	font-size: 14px;
+	}
+	
+	
+	input:required {
+	border-color: red;
+	}
+
+	form {
+	background-color: SlateGray;
+	max-width: 350px;
+	height: 300px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 25px;
+	box-shadow: 0px 0px 10px #ffff;
+	border-style: solid;
+	border-color: LightSteelBlue;
+	margin: 0 auto;
+	color: white;
+	}
+
+	#compra{
+	margin-top: 20px;
+	}
+	
+	.Info div{
+	display: flex;
+	margin-bottom: 5px;
+	justify-content: space-between;
+	margin-right: 5px;
+	}
+	
+	.Info label {
+	margin-left: 30px;
+	}
+	
+	input {
+	width: 60%;
+	}
+	
+	input{
+	width: 60%;
+	}
+	
+	.InfoTarjeta div{
+	display: flex;
+	justify-content: space-between;
+	margin-right: 5px;
+	}
+	
+	.InfoTarjeta div label {
+	margin-left: 30px;
+	}
+	
+	input{
+	border-radius: 5px;
+	}
+	.Submit{
+	width: 40%;
+	border-radius: 1px;
+	}
+</style>
+	</head>
+	<body>
+		<form>
+			<div class="Info">
+				<p>Datos personales</p>
+				<div><label>Nombre </label> <input type="text"
+						placeholder="Escribe tu nombre completo" required class="Nombre"
+						name="Nombre"
+						id="Nombre"></div>
+
+				<div><label>Email </label> <input type="email"
+						placeholder="correo@dominio.com" required class="Email"
+						name="Email"
+						id="Email" ></div>
+
+				<div><label>Teléfono </label><input type="tel" placeholder="P.e +444323244"
+						class="Telefono"
+						name="Telefono"
+						id="Telefono" /></div>
+
+				<div><label>País </label><input type="text" class="Pais"
+						name="Pais"
+						id="Pais" /></div>
+
+				<div><label>Edad </label><input id="Edad" name="Edad" type="number" min="18"
+						max="100" step="1"></div>
+			</div>
+			<div class="InfoTarjeta">
+				<p>Datos de tarjeta de crédito</p>
+
+				<div><label>Número </label><input id="Número" name="Número" type="number"
+						required min="000000000000000" max="9999999999999999" step="1"></div>
+
+				<div><label>Nombre </label><input id="Nombre" name="Nombre" type="text"
+						placeholder="Nombre del propietario" required class="Nombre"
+						name="Nombre"
+						id="Nombre"></div>
+
+				<input class="Submit" type="submit" value="Realizar compra" id="compra" />
+			</div>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Cuestionario de HTML</title>
+        <style type="text/css">
+
+    * {
+    padding: 0;
+    }
+        
+    h1 {
+        margin-right: 250px;
+        font-family: Verdana;
+        color: #AD6FA0;
+    
+    }
+    body {
+        font-family: Arial;
+    }
+	form {
+        max-width: 750px;
+        height: 650px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+        margin: 0 auto;
+        }
+
+    fieldset {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    div label {
+        color:#444444;
+        font-weight: bold;
+    }
+    
+    #Pregunta6 div{
+    padding-left: 30px;
+    }
+
+    ol {
+        color:#9D9FF9;
+        font-weight: bold;
+    }
+
+    #respuestatexto{
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 650px;
+    }
+
+    fieldset:not(#Pregunta6) div label:first-of-type{
+    margin-left: 30px;
+    }
+
+    fieldset {
+        border-color: lightblue;
+    }
+
+    #limpiar {
+        height: 30px;
+        width: 60px;
+        color: #AD6FA0;
+        float: right;
+    }
+    #Comprobar {
+        height: 30px;
+        width: 90px;
+        color: #AD6FA0;
+        float: right;
+        margin-left: 25px;
+
+    }
+    </style>
+    </head>
+    <body>
+        <form>
+            <header>
+                <h1>Cuestionario de HTML</h1>
+            </header>
+            <ol>
+                <li>
+                    <fieldset class="Pregunta1">
+                        <label>Las etiquetas &ltol&gt y &ltli&gt se emplean para
+                            crear</label>
+                        <div>
+                            <label>a.</label>
+                            <input type="radio" name="resp1"
+                                value="resp1" />
+                            <label for="resp1">Una tabla</label>
+                        </div>
+                        <div>
+                            <label>b.</label>
+                            <input type="radio" name="resp2"
+                                id="resp2"
+                                value="resp2" />
+                            <label for="resp2">Una lista ordenada</label>
+                        </div>
+                        <div>
+                            <label>c.</label>
+                            <input type="radio" name="resp3"
+                                id="resp3"
+                                value="resp3" />
+                            <label for="resp3">Una lista desordenada</label>
+                        </div>
+                    </li>
+                    <li>
+                    </fieldset>
+                    <fieldset class="Pregunta2">
+                        <label>En HTML, para definir que un idioma principal de
+                            una
+                            página es el español se emplea</label>
+                        <div>
+                            <label>a.</label>
+                            <input type="radio" name="resp1"
+                                value="resp1" />
+                            <label for="resp1">&lthtml lang="es"&gt</label>
+                        </div>
+                        <div>
+                            <label>b.</label>
+                            <input type="radio" name="resp2"
+                                id="resp2"
+                                value="resp2" />
+                            <label for="resp2">&lthead id="es"&gt</label>
+                        </div>
+                        <div>
+                            <label>c.</label>
+                            <input type="radio" name="resp3"
+                                id="resp3"
+                                value="resp3" />
+                            <label for="resp3">&lthead lang="es"&gt</label>
+                        </div>
+                    </li>
+                    <li>
+                    </fieldset>
+                    <fieldset class="Pregunta3">
+                        <label>Indica qué etiqueta se usa en HTML para definir
+                            el título
+                            de una tabla: </label> <input type="text" required
+                            class="resptext"
+                            name="resptext"
+                            id="resptext" />
+                    </fieldset>
+                </li>
+                <li>
+                    <fieldset class="Pregunta4">
+                        <label>¿Qué define la etiqueta &lttd&gt en HTML?</label>
+                        <div>
+                            <label>a.</label>
+                            <input type="radio" name="resp1"
+                                value="resp1" />
+                            <label for="resp1">Una fila en una tabla</label>
+                        </div>
+                        <div>
+                            <label>b.</label>
+                            <input type="radio" name="resp2"
+                                id="resp2"
+                                value="resp2" />
+                            <label for="resp2">Un elemento en una lista de
+                                definición</label>
+                        </div>
+                        <div>
+                            <label>c.</label>
+                            <input type="radio" name="resp3"
+                                id="resp3"
+                                value="resp3" />
+                            <label for="resp3">Una celda en una tabla</label>
+                        </div>
+                    </li>
+                    <li>
+                    </fieldset>
+                    <fieldset class="Pregunta5">
+                        <label>Describe cómo se puede incluir el estilo CSS en
+                            una
+                            página HTML:</label>
+                        <textarea id="respuestatexto" name="respuestatexto"
+                            rows="6" cols="40"></textarea>
+                    </fieldset>
+                </li>
+                <li>
+                    <fieldset id="Pregunta6">
+                        <label>Selecciona las afirmaciones que son verdaderas:</label>
+                        <div>
+                            <input type="checkbox" name="opc1" id="opc1" />
+                            <label for="opc1">En HTML, para crear un
+                                hipervínculo
+                                se usa la etiqueta &lthref&gt</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="opc2" id="opc2" />
+                            <label for="opc2">Los elementos de una lista
+                                desplegable se
+                                definen con li.</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="opc3" id="opc3" />
+                            <label for="opc3">Los atributos &ltrowspan&gt y
+                                &ltcolspan&gt son atributos de la etiqueta div.</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="opc4" id="opc4" />
+                            <label for="opc4">Las etiquetas &lth1&gt y
+                                &lth2&gt se usan para definir encabezados.</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="opc5" id="opc5" />
+                            <label for="ioc">La etiqueta &ltol&gt debe ir
+                                definida
+                                dentro de la etiqueta &ltli&gt.</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="opc6" id="opc6" />
+                            <label for="opc6">La etiqueta &ltli&gt debe ir
+                                definida
+                                dentro de la etiqueta &ltul&gt.</label>
+                        </div>
+                    </fieldset>
+                </li>
+            </ol>
+            <div id="botones">
+                <input type="submit" value="Comprobar" id="Comprobar" />
+                <input type="reset" value="Limpiar" id="limpiar" />
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Patrones</title>
+        <style type="text/css">
+</style>
+    </head>
+    <body>
+        <form>
+            <label>Nombres de personas:</label> <input type="text"
+                pattern="([A-ZÁÉÍÓÚ][a-zñáéíóú]+) (\s[A-ZÁÉÍÓÚa-zñáéíóú] [ñáéíóúa-z]+)*"
+                class="NombresPersonas" />
+            <label>Contraseña:</label> <input type="text"
+                pattern="[a-z0-9-]{6,}"
+                class="Contraseña" />
+            <label>Código de ciclo:</label> <input type="text"
+                pattern="C[SM][A-Z]{3}\d{2}"
+                class="CodigoDeCiclo" />
+            <label>Matrícula:</label> <input type="text"
+                pattern="(\d{4} [B-DF-HJ-NP-TV-Z] {3})[A-Z]{1,2}[-]\d{4}[A-Z]{1,2}"
+                class="Matrícula" />
+            <label>Valor:</label> <input type="text"
+                pattern="[a-zA-Z]{5,10}"
+                class="Valor" />
+            <input type="reset" value="Limpiar" id="limpiar" />
+            <input type="submit" value="Enviar" id="enviar" />
+        </form>
+    </body>
+</html>

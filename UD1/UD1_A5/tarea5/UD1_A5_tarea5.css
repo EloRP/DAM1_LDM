@@ -1,0 +1,26 @@
+div {
+ width:1100px;
+ height:420px;
+ justify-content: center;
+ background-size: 100% 100%;
+ background:url(decoration.png),
+			url(old_paper.jpg);
+ display: flex;
+ align-items:center;
+ margin: 0 auto;
+}
+
+div p{
+ font-size:110px;
+ color: red;
+ font-family: Arial;
+ letter-spacing: 10px;
+ margin: 0 auto;
+ text-shadow: 2px 6px 5px gray;
+}
+
+nav{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
