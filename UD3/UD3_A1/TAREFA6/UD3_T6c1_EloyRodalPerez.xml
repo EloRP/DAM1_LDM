@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD -->
+<!DOCTYPE material SYSTEM "UD3_T6c_EloyRodalPerez.dtd">
+
+<!-- XML -->
+<material>
+  <libro ISBN="X9-8998">
+    <titulo>Inverno na Pereira</titulo>
+    <editorial>Toxo verde</editorial>
+    <autor>Xurxo Cancelas Brión</autor>
+    <ano>2008</ano>
+  </libro>
+</material>

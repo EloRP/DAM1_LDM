@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE Hardware SYSTEM "UD3_T6b_EloyRodalPerez.dtd">
+<Hardware>
+    <Fabricantes>
+        <Fabricante Nome="Fabricante1" Web="" Correo="info@fabricante1.com" FabricanteID="A1">Nome, Web, Correo</Fabricante>
+        <Fabricante Nome="Fabricante2" Web="" Correo="info@fabricante2.com"/>
+    </Fabricantes>
+    <Espacios>
+        <Espacio Nome="Espacio1" Tipo="aula" Ubicacion="Edificio A"/>
+        <Espacio Nome="Espacio2" Tipo="sala" Ubicacion="Edificio B"/>
+    </Espacios>
+    <Maquina Nome="Maquina1">
+        <Info>
+            <Tipo>Desktop</Tipo>
+            <FabricanteRef FabricanteID="Fabricante1"/>
+            <Procesador>Intel Core i7</Procesador>
+            <Memoria>8GB DDR4</Memoria>
+            <Disco Tecnoloxia="SSD" Capacidade="512GB"/>
+            <Lectora Tipo="CD" Velocidade="24x"/>
+        </Info>
+        <Config>
+            <Role>Workstation</Role>
+            <OS>Windows 10</OS>
+            <IP>192.168.1.101</IP>
+            <Gateway>192.168.1.1</Gateway>
+        </Config>
+    </Maquina>
+    <Maquina Nome="Maquina2">
+        <Info>
+            <Tipo>Laptop</Tipo>
+            <FabricanteRef FabricanteID="Fabricante2"/>
+            <Procesador>AMD Ryzen 5</Procesador>
+            <Memoria>16GB DDR4</Memoria>
+            <Disco Tecnoloxia="SATA" Capacidade="1TB"/>
+        </Info>
+        <Config>
+            <Role>Development</Role>
+            <OS>Ubuntu 20.04</OS>
+            <IP>192.168.1.102</IP>
+            <Gateway>192.168.1.1</Gateway>
+        </Config>
+    </Maquina>
+</Hardware>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!-- DTD -->
+<!DOCTYPE edificio SYSTEM "UD3_T5a_EloyRodalPerez.dtd">
+
+<!-- XML -->
+<edificio valor="" alquiler="verdadeiro">
+    <enderezo>
+        <rua>Echegaray</rua>
+        <numero>45</numero>
+        <poboacion>Marín</poboacion>
+        <provincia>Pontevedra</provincia>
+        <codigoPostal>36900</codigoPostal>
+    </enderezo>
+    <dataConstrucion mes="12" ano="1978" />
+    <material>Ladrillo</material>
+</edificio>

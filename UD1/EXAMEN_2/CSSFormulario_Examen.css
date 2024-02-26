@@ -1,0 +1,129 @@
+* {
+  font-family: Arial;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+header {
+  margin: 0 auto;
+  font-variant: small-caps;
+  letter-spacing: 10px;
+  display: flex;
+  justify-content: space-around;
+  color: cadetblue;
+}
+
+form {
+  margin: 0 auto;
+  width: 580px;
+  height: 750px;
+  background-color: cadetblue;
+  border-radius: 10px;
+  padding-top: 30px;
+}
+
+fieldset {
+  border-color: lightsteelblue
+}
+fieldset legend {
+  color: white;
+}
+#DatosPersonales label {
+  margin-left: 30px;
+  margin-right: 10%;
+  float: left;
+}
+
+#checkbox{
+  color: white;
+  
+}
+#DatosPersonales {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+#DatosPersonales input {
+  width: 50%;
+  margin-right: 20px;
+}
+
+#DatosPersonales div {
+  background-color: powderblue;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+fieldset {
+  padding-top: 30px;
+}
+
+input:required {
+  border-color: red;
+}
+
+#Solicitud {
+  border-radius: 10px;
+  width: 85%;
+  margin: 0 auto;
+  padding-left: 30px;
+  color: white;
+}
+
+#Curso {
+  background-color: powderblue;
+  margin-right: 30px;
+  display: flex;
+  align-content: space-between;
+  height: 20px;
+  margin-bottom: 20px;
+}
+#Curso label {
+  margin-right: 50px;
+  color: black;
+}
+
+select {
+  padding-right: 30px;
+  width: 80%;
+  display: flex;
+  flex-direction: space-between;
+  height: 20px;
+}
+
+#Modalidad {
+  padding-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#Modalidad {
+  justify-content: space-around;
+}
+
+textarea {
+  width: 90%;
+}
+
+#Botones {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  width: 85%;
+  margin: 0 auto;
+}
+button {
+  margin-right: 10px;
+  float: right;
+  padding-right: 10px;
+}
+

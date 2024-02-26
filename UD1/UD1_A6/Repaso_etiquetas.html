@@ -3,11 +3,119 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Formulario de contacto</title>
-		<!-- <link rel="stylesheet" type="text/css" href="UD1_A5_tarea4.css"/> -->
-		<form> <!-- ETIQUETA DE FORMULARIO, es como el HTML de aquí -->
-			<body>
-				
-			</body>
-		</form>
+		<style>
+			form {
+				background-color: SteelBlue;
+				max-width: 550px;
+				height: 650px;
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-top: 20px;
+				padding-bottom: 25px;
+				box-shadow: 0px 0px 10px #ffffff;
+				border-style: solid;
+				border-color: LightSteelBlue;
+				margin: 0 auto;
+				color: white;
+				}
+		</style>
+		<body>
+			<header>
+				<h1>Prueba</h1>
+			</header>
+			<form> <!-- ETIQUETA DE FORMULARIO, es como el HTML de aquí -->
 
+				<fieldset> <!-- FIELDSET agrupa controles con un mismo proposito-->
+					<legend> Leyenda </legend>
+					<div><label>Nombre: </label> <input type="text" /></div>
+					<!-- label es el nombre del input -->
+					<div><label for="pwdInput">Contraseña:</label><input type="password"
+							id="pwdInput" /></div>
+					<div><label for="numInput">Número:</label><input type="number"
+							id="numInput" /></div>
+					<div><label for="emailInput">Correo electrónico:</label><input type="email"
+							id="emailInput" /></div>
+					<div><label for="dateInput">Fecha:</label><input type="date"
+							id="dateInput" /></div>
+					<!-- type es el tipo de input. hay text, password, submit, reset, button (genérico), checkbox (con tick), radio (botoncitos), num (cuadro de números)  -->
+					<div><label for="checkboxInput">Casilla de verificación:</label><input
+							type="checkbox" id="checkboxInput" /></div>
+					<div><label for="radioInput">Botón de opción:</label><input type="radio"
+							id="radioInput" /></div> <!-- El botón radio es stackeable -->
+					<div><label for="fileInput">Cargar archivo:</label><input type="file"
+							id="fileInput" /></div>
+					<div><label for="submitInput">Enviar:</label><input type="submit"
+							id="submitInput" /></div>
+					<div><label for="resetInput">Restablecer:</label><input type="reset"
+							id="resetInput" /></div>
+					<div><label for="colorInput">Color:</label><input type="color"
+							id="colorInput" /></div>
+					<div><label for="rangeInput">Cuadro deslizante:</label><input type="range"
+							id="rangeInput" /></div>
+					<div><label>RANGO DE NÚMERO: </label><input id="Edad" name="Edad"
+							type="number"
+							min="18"
+							max="100" step="1"></div>
+					<label for="como">Desplegable</label>
+					<input type="text" id="como" name="como" list="origen">
+					<datalist id="origen">
+						<select name="select">
+							<option value="television">Televisión</option>
+							<option value="radio">Radio</option>
+							<option value="periodico">Periódico</option>
+							<option>Otros</option>
+						</select>
+					</datalist>
+					<!-- Cuadro de texto ampliable-->
+					<textarea id="texto" name="texto" rows="4" cols="40">Escribe
+						algo</textarea>
+					<textarea id="texto" name="texto" rows="4" cols="40"
+						placeholder="Escribe
+						algo"></textarea>
+					<!-- Desplegable -->
+					<select name="idioma">
+						<option value="gl">Gallego</option>
+						<option value="es">Castellano</option>
+						<option value="eu">Euskera</option>
+						<option value="ct">Catalán</option>
+						<option SELECTED value="po">Portugués</option>
+						<option value="ru">Ruso</option>
+					</select>
+
+				</fieldset>
+				<fieldset> <!-- fieldset es una agrupación de controles -->
+					<input type="radio" name="estudios" id="estudios_1" value="eso" />
+					<label for="estudios_1">ESO</label>
+					<!-- REGEX -->
+
+					<label>Nombres de personas:</label> <input type="text"
+						pattern="([A-ZÁÉÍÓÚ][a-zñáéíóú]+) (\s[A-ZÁÉÍÓÚa-zñáéíóú] [ñáéíóúa-z]+)*"
+						class="NombresPersonas" />
+					<!-- ([[A-ZÁÉÍÓÚ][a-zñáéíóú]+])	[] indica rangos. + indica que tiene que haber por lo menos un caracter de esa clase. \s es un espacio en blanco.	-->
+					<label>Contraseña:</label> <input type="text"
+						pattern="[a-z0-9-]{6,}"
+						class="Contraseña" />
+					<!-- [a-z0-9-] permite que coincidan cualquier minúscula o dígitos, además de un guion. {6,} establece que tienen que tener al menos una longitud de seis caracteres.-->
+					<label>Código de ciclo:</label> <input type="text"
+						pattern="C[SM][A-Z]{3}\d{2}"
+						class="CodigoDeCiclo" />
+					<!-- C (tiene que ser C mayúsc sí o sí) [SM] o es S o M. [A-Z]{3} tres mayúsculas consecutivas. \d{2} 2 dígitos.-->
+					<label>Matrícula:</label> <input type="text"
+						pattern="(\d{4} [B-DF-HJ-NP-TV-Z] {3})[A-Z]{1,2}[-]\d{4}[A-Z]{1,2}"
+						class="Matrícula" />
+					<!-- (\d{4} [B-DF-HJ-NP-TV-Z]{3}) (\d{4}) captura un grupo de cuatro nums al inicio. [B-DF-HJ-NP-TV-Z]{3}) Espacio y se capturan tres mayúsculas de ese conjunto. [-] busca un guion
+					después de las letras. [A-Z]{1,2} busca dos letras en mayúsc. después de los números.-->
+					<label>Valor:</label> <input type="text"
+						pattern="[a-zA-Z]{5,10}"
+						class="Valor" />
+					<!-- [a-zA-Z] puede ser de a (a) z minúsculas o de A a Z mayúsculas de 5 a 10 veces.-->
+					<!-- MENSAJE DE VALIDACIÓN-->
+					<input type="text" id="alias" name="alias" required pattern="[a-z]+"
+						oninvalid="setCustomValidity('El alias es obligatorio y debe tener sólo letras minúsculas')">
+				</fieldset>
+				<fieldset>
+					<input type="radio" name="sexo" id="estuidios_1" value="lmao" /> Ola sebas<label></label>
+				</fieldset>
+			</form>
+		</body>
 	</html>

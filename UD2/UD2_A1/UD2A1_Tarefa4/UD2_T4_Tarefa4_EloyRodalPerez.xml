@@ -1,0 +1,50 @@
+<?xml version="1.1" encoding="utf-8"?>
+<centro xmlns:c="http://www.centro.edu/xmlns/ciclos"
+    xmlns:a="http://www.centro.edu/xmlns/alumnos">
+    <c:ciclos>
+        <c:ciclo id="ASIR" grao="CS">
+            <c:módulo id="MP0370">
+                <c:nome>Planificación e administración de redes</c:nome>
+                <c:horas>213</c:horas>
+            </c:módulo>
+            <c:módulo id="MP0371">
+                <c:nome>Fundamentos hardware</c:nome>
+                <c:horas>107</c:horas>
+            </c:módulo>
+            <a:alumnos>
+                <a:alumno>
+                    <a:nome>Xoan</a:nome>
+                    <a:apelidos>Cancedo da Foz</a:apelidos>
+                    <a:ciclo>ASIR ordinario</a:ciclo>
+                    <a:curso>1º</a:curso>
+                    <a:datanacemento>06/11/1991</a:datanacemento>
+                    <a:nota>Xa fixo outro ciclo</a:nota>
+                    <a:módulo id="MP0370" nota="9.5" />
+                    <a:módulo id="MP0371" nota="8.0" />
+                </a:alumno>
+                <a:alumno>
+                    <a:nome>Pepe</a:nome>
+                    <a:apelidos>Pérez Pérez</a:apelidos>
+                    <a:ciclo>ASIR Ordinario</a:ciclo>
+                    <a:curso>1º</a:curso>
+                    <a:datanacemento>6/12/2004</a:datanacemento>
+                    <a:nota>Primeira vez no centro.</a:nota>
+                    <a:módulo id="MP0370" nota="8.8" />
+                    <a:módulo id="MP0371" nota="7.2" />
+                </a:alumno>
+            </a:alumnos>
+        </c:ciclo>
+        <c:ciclo id="DAW" grao="CS">
+            <c:módulo id="MP0270">
+                <c:nome>Linguaxes de marcas</c:nome>
+                <c:horas>220</c:horas>
+            </c:módulo>
+            <c:módulo id="MP0271">
+                <c:nome>Contornos de desenvolvemento</c:nome>
+                <c:horas>87</c:horas>
+            </c:módulo>
+        </c:ciclo>
+    </c:ciclos>
+
+
+</centro>

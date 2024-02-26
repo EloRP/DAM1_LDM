@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pedido>
+    <datos_cliente>
+        <nombre>Roberto</nombre>
+        <apellidos>Movilla</apellidos>
+    </datos_cliente>
+    <dirección_envío>
+        <ciudad>Albacete</ciudad>
+        <calle> Plaza de la Duquesa </calle>
+        <número>12</número>
+        <CFP>05020</CFP>
+    </dirección_envío>
+    <datos_receptor>
+        <nombre>Alicia</nombre>
+        <apellidos>Abad</apellidos>
+    </datos_receptor>
+    <dirección_cliente>
+        <ciudad>Madrid</ciudad>
+        <calle>General Ricardos</calle>
+        <número>56</número>
+        <CP>28055 </CP>
+    </dirección_cliente>
+    <fecha_pedido>
+        <día>20</día>
+        <mes>Octubre</mes>
+        <año>1999</año>
+    </fecha_pedido>
+    <contenido_pedido>
+        <producto modelo="872-AA" precio="148.95€">Cortadora de césped</producto>
+        <producto modelo="926-FH" precio="7.98€">Podadora</producto>
+    </contenido_pedido>
+</pedido>
+

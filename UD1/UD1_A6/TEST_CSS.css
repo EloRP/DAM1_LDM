@@ -1,0 +1,20 @@
+section div {
+    display: flex;
+    flex-direction: row;
+}
+
+#xd{
+    width: 150px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: 250px;
+    height: 250px;
+    border: 1px solid;
+    margin: 0 auto;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!-- DTD -->
+<!DOCTYPE curriculumVitae SYSTEM "UD3_T8_EloyRodalPerez.dtd">
+
+<!-- XML -->
+<curriculumVitae>
+    <presentacion>PRESENTACIÓN VA AQUÍ</presentacion>
+    <estudios>PREESCOLAR</estudios>
+    <estudios>PRIMARIA</estudios>
+    <estudios>ESO</estudios>
+    <estudios>BACHILLERATO</estudios>
+    <estudios>FP SUPERIOR</estudios>
+    <idiomas nombre="galego" nivel="alto" />
+    <idiomas nombre="español" nivel="alto" />
+    <idiomas nombre="inglés" nivel="alto" />
+    <idiomas nombre="francés" nivel="bajo" />
+
+    <otros>OTROS DATOS</otros>
+    <referencias>REFERENCIAS AQUÍ</referencias>
+    <observaciones>OBSERVACIOES AQUÍ</observaciones>
+</curriculumVitae>

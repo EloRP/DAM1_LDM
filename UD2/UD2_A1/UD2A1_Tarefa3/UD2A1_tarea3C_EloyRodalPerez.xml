@@ -1,0 +1,36 @@
+<?xml version="1.1" encoding="utf-8"?>
+<inmobiliaria nombre="Sepeto S.A">
+    <vivienda tipo="piso" propietario="asd" superficie="150">
+        <alquiler precio="500" />
+        <venta precio="10000" />
+        <situación>
+            <rúa>Echegaray</rúa>
+            <número>6</número>
+            <localidade>Marín</localidade>
+            <CP>36900</CP>
+        </situación>
+        <huecos>
+            <hueco tipo="Cocina" m2="16">Amueblada con electrodomésticos</hueco>
+            <hueco tipo="Salón" m2="29"></hueco>
+            <hueco tipo="Baño" m2="10"></hueco>
+            <hueco tipo="Habitación" m2="23"></hueco>
+            <hueco tipo="Trastero" m2="4"> En el garaje</hueco>
+            <hueco tipo="Trastero" m2="14"></hueco>
+            <hueco tipo="Garaje" m2="19">Plaza 13, INFO</hueco>
+            <hueco tipo="Terraza" m2="19"></hueco>
+        </huecos>
+        <amueblado/>
+        <ascensor/>
+        <comentario>SOLO SE ALQUILA POR CURSO ESCOLAR.</comentario>
+        <fotos>
+            <foto>foto1.jpg</foto>
+        </fotos>
+    </vivienda>
+    <propietarios>
+        <propietario id="asd">
+            <nombre>Eloy</nombre>
+            <apellidos>Rodal Pérez</apellidos>
+            <teléfono>64532514</teléfono>
+        </propietario>
+    </propietarios>
+</inmobiliaria>

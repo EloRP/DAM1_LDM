@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!-- DTD -->
+<!DOCTYPE informe SYSTEM "UD3_T7b_EloyRodalPerez.dtd">
+
+<!--XML-->
+<informe>
+    <descripcion>DESCRIPCION</descripcion>
+    <seguro tipo="edificio">
+        <numero>12345</numero>
+        <cliente-Personal>NOMBRECLIENTE</cliente-Personal>
+    </seguro>
+    <seguro tipo="contenido">
+        <numero>12345</numero>
+        <cliente-Empresa>NOMBRECLIENTEEMPRESA</cliente-Empresa>
+    </seguro>
+    <fechaInforme fechaInicio="X-0X-200X" />
+</informe>
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!-- DTD -->
+<!DOCTYPE reservas SYSTEM "UD3_T5b_EloyRodalPerez.dtd">
+
+<!-- XML -->
+<reservas ano="2024">
+    <reserva local="Polideportivo" bonificacion="200€">
+        <data mes="Julio" dia="23" horario="tarde" />
+        <evento>Carreira popular</evento>
+        <clienteEmpresa>NOME CLIENTE</clienteEmpresa>
+    </reserva>
+    <reserva local="LocalSocial">
+        <data mes="Septiembre" dia="4" horario="día" />
+        <evento>Festa cumpleanos</evento>
+        <clientePersoal>NOME PERSOA QUE RESERVA</clientePersoal>
+    </reserva>
+</reservas>

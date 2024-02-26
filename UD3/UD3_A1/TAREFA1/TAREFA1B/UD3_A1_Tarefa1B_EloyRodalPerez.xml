@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?>
+<!-- DTD -->
+<!DOCTYPE mensaxe SYSTEM "email.dtd">
+
+<!--XML -->
+<mensaxe>
+    <de>eloyrodalperez@gmail.com</de>
+    <para>juanjua@gmail.com</para>
+    <para>pepitopp@edu.xunta.es</para>
+    <para>maria@hotmail.com</para>
+    <asunto>Envío formularios</asunto>
+    <adxunto>D:\docus\form1.pdf</adxunto>
+    <adxunto>D:\docus\formulariotrabajo.pdf</adxunto>
+    <adxunto>D:\docus\formularioempleados.jpg</adxunto>
+</mensaxe>

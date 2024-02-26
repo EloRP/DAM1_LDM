@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <!-- Eloy Rodal Pérez. Se ha usado Google Chrome.-->
+    <head>
+        <meta name="author" content="Eloy" />
+        <meta name="description" content="Formulario_EXAMEN" />
+        <title>Formulario</title>
+        <link rel="stylesheet" type="text/css"
+            href="CSSFormulario_Examen.css">
+    </head>
+    <body>
+        <header><h1>Cursos de idiomas</h1></header>
+        <form>
+            <fieldset id="DatosPersonales">
+                <legend>Datos personales</legend>
+                <div><label>Fecha</label><input type=date name="fecha"
+                        id="fecha" /></div>
+                <div><label>Nombre</label><input autocomplete="off" required
+                        type=text
+                        name="nombre"
+                        id="nombre"
+                        pattern="([A-Z-a-zñáéíóú]+) ([A-Z-a-zñáéíóú]+) ([a-z])+)"
+                        placeholder="Escribe tu nombre completo" /></div>
+                <div><label>Telefono</label><input required type=tel
+                        name="telefono"
+                        id="telefono"
+                        placeholder="P.e 444323244"
+                        pattern="\d {9}" /></div>
+                <div><label>Localidad</label><input type=text name="local"
+                        id="local" /></div>
+                <div><label>Codigo postal</label><input type=number name="CP"
+                        id="CP"
+                        pattern="\d {5}"></div>
+                <nav id="checkbox"><label>Antiguo
+                        alumno</label><input type=checkbox name="antiguoal"
+                        id="antiguoal" /></nav>
+            </fieldset>
+
+            <fieldset id="Solicitud">
+                <legend>Solicitud</legend>
+                <div id="Curso"><label>Curso</label><select>
+                        <optgroup label="Oficiales">
+                            <option selected>Portugués</option>
+                            <option>Inglés</option>
+                            <option>Francés</option>
+                            <option>Alemán</option>
+                            <option>Italiano</option>
+                        </optgroup>
+                        <optgroup label="Conversación">
+                            <option>Italiano</option>
+                            <option>Inglés</option>
+                            <option>Francés</option>
+                        </optgroup>
+                    </select></div>
+                <fieldset id="Modalidad">
+                    <legend>Modalidad</legend>
+                    <div><input type=radio name="modalidad" id="presencial" /><label>Presencial</label></div>
+                    <div><input type=radio name="modalidad" id="semipresencial" /><label>Semipresencial</label></div>
+                    <div><input type=radio name="modalidad" id="distancia" /><label>Distancia</label></div>
+                </fieldset>
+                <div><input type=checkbox name="info" id="info" /><label>Quiero
+                        recibir información de nuevos cursos.</label></div>
+                <p id="Observaciones">Observaciones:</p>
+                <textarea placeholder="Información adicional" rows=5 cols=5></textarea>
+            </fieldset>
+            <fieldset id="Botones">
+                <div><button type=reset name="limpiar" id="limpiar"><label>Limpiar</label></button></div>
+                <div><button type=submit name="enviarinfo" id="enviarinfo"><label>Enviar
+                            información</label></button></div>
+            </fieldset>
+        </form>
+        <footer><p>Autor: Eloy Rodal Pérez. Fecha de examen: 29 de enero de 2024</p></footer>
+    </body>
+</html>

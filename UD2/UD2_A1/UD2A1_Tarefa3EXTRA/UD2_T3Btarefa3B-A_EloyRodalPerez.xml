@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hoteles>
+    <hotel>
+        <nombre>Vila de Marín</nombre>
+        <dirección>
+            <calle>Avenida de Ourense</calle>
+            <número>4</número>
+        </dirección>
+        <ciudad>Marín</ciudad>
+        <país>España</país>
+        <estrellas>3</estrellas>
+        <descripción>Hotel con vistas al mar.</descripción>
+        <habitaciones individuales="30" dobles="15"></habitaciones>
+    </hotel>
+
+    <hotel>
+        <nombre>Hotel Albacete Palace</nombre>
+        <dirección>
+            <calle>Plaza de la Duquesa</calle>
+            <número>12</número>
+        </dirección>
+        <ciudad>Albacete</ciudad>
+        <país>España</país>
+        <estrellas>4</estrellas>
+        <descripción>Gran hotel con desayuno bufé estilo continental incluido.</descripción>
+        <habitaciones individuales="50" dobles="25"></habitaciones>
+    </hotel>
+</hoteles>

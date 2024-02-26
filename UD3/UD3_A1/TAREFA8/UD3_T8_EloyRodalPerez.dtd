@@ -1,0 +1,23 @@
+<!-- El DTD inicial (primera línea) nos da el elemento raíz del DTD y sus hijos:
+Presentacion, una o más instancias de estudios o experienciaLaboral, cero o más instancias de los
+siguientes tres elementos opcionales
+idiomas, deportes y otros, el elemento opcional referencias, seguido de otro elemento opcional
+observaciones.-->
+
+<!ELEMENT curriculumVitae (presentacion, (estudios | experienciaLaboral)+, (idiomas | deportes | otros)*, referencias*, observaciones?)>
+<!ELEMENT presentacion (#PCDATA)>
+<!ELEMENT estudios (#PCDATA)>
+<!ATTLIST estudios notamedia CDATA #IMPLIED>
+<!ELEMENT empresaPracticas EMPTY>
+<!ATTLIST empresaPracticas
+    nombreEmpresa CDATA #REQUIRED
+    horasRealizadas CDATA #REQUIRED>
+<!ELEMENT experienciaLaboral (#PCDATA)>
+<!ELEMENT idiomas EMPTY>
+<!ATTLIST idiomas
+    nombre CDATA "galego"
+    nivel (bajo | medio | alto) "medio">
+<!ELEMENT deportes (#PCDATA)>
+<!ELEMENT otros (#PCDATA)>
+<!ELEMENT referencias (#PCDATA)>
+<!ELEMENT observaciones (#PCDATA)>

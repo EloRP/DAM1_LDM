@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ciclo nombre="DAM">
+    <familia rama="IFC">
+        <tipo_ciclo tipo="CS">
+            <modulo sesiones="5">Lenguaje de marcas</modulo>
+            <modulo sesiones="4">Formación y orientación laboral</modulo>
+            <modulo sesiones="9">Programación</modulo>
+            <modulo sesiones="7">Bases de datos</modulo>
+            <modulo sesiones="4">Contornos de desenvolvemento</modulo>
+            <modulo sesiones="7">Sistemas informáticos</modulo>
+        </tipo_ciclo>
+    </familia>
+</ciclo>
