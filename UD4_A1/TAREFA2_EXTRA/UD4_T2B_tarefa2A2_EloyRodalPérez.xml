@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="UD4_T2B_tarefa2A_EloyRodalPerez.xsd">
+    <nombre>Juan</nombre>
+    <apellido>Rodríguez</apellido>
+    <apellido>Pérez</apellido>
+    <fechanacimiento>2004-03-12</fechanacimiento>
+    <trianero>true</trianero>
+</persona>

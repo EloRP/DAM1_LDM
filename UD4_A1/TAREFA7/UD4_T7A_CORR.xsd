@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:attributeGroup name="mellorGrupo">
+        <xs:attribute name="ref" type="tipoRef" use="required" />
+        <xs:simpleType name="tipoRef">
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]{2}[-][/d]{4-5}"/>
+            </xs:restriction>
+        </xs:simpleType>
+            
+        <xs:attribute name="oscar" type="tipoOscar" minOccurs="0" />
+        
+        <xs:simpleType name="tipoOscar">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="SI"/>
+            </xs:restriction>
+        </xs:simpleType>    
+    </xs:attributeGroup>
+    <xs:element name="oscar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="película" maxOccurs="unbounded"/>
+                <xs:element name="persona" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="ano" type="xs:gYear"/>  
+        </xs:complexType>
+    </xs:element>  
+    <xs:element name="película">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="título" type="xs:string" use="required" />
+                <xs:element name="títuloOrixinal" type="xs:string" minOccurs="0"/>
+                <xs:element name="ano" type="xs:gYear" minOccurs="0" />
+                <xs:element name="nacionalidade" type="xs:string" minOccurs="0" />
+                <xs:element name="xéneros" type="tipoGenero" minOccurs="0" />
+                <xs:element name="duración" type="xs:positiveInteger" minOccurs="0" />
+                <xs:element name="nominacións" type="tipoNominacions" use="required" />
+            </xs:sequence>
+            <xs:attribute name="codigo" type="tipoCodigoPeli" use="required" />
+        </xs:complexType>
+        <xs:simpleType name="tipoCodigoPeli">
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]{2}-\d{4,5}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:simpleType name="tipoGenero">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{0-50} [ ] {3}"/>
+            <xs:enumeration value="Negro"/>
+            <xs:enumeration value="Drama"/>
+            <xs:enumeration value="Acción"/>
+            <xs:enumeration value="Comedia"/>
+            <xs:enumeration value="Thriller"/>
+            <xs:enumeration value="Musical"/>
+        </xs:restriction>
+    </xs:simpleType>
+               
+</xs:sequence>
+            
+          
+<xs:complexType name="tipoNominacions">
+    <xs:element name="mellorPelícula" minOccurs="0" >
+        <xs:complexType>
+            <xs:attributeGroup ref="mellorGrupo" />
+        </xs:complexType> 
+    </xs:element>
+    <xs:element name="mellorDirector" minOccurs="0">
+        <xs:complexType>
+            <xs:attributeGroup ref="mellorGrupo" />
+        </xs:complexType> 
+    </xs:element>                    
+    <xs:element name="mellorActor"  minOccurs="0" >
+        <xs:complexType>
+            <xs:attributeGroup ref="mellorGrupo" />
+        </xs:complexType> 
+    </xs:element>           
+    <xs:element name="mellorActriz" minOccurs="0" >
+        <xs:complexType>
+            <xs:attributeGroup ref="mellorGrupo" />
+        </xs:complexType> 
+    </xs:element>
+    <xs:element name="mellorActorSecundario" minOccurs="0" >
+        <xs:complexType>
+            <xs:attributeGroup ref="mellorGrupo" />
+        </xs:complexType> 
+    </xs:element>
+    <xs:element name="mellorActrizSecundaria" minOccurs="0" >
+        <xs:complexType>
+            <xs:attributeGroup ref="mellorGrupo" />
+        </xs:complexType> 
+    </xs:element>
+</xs:complexType>
+           
+<xs:element name="persona">
+    <xs:attribute name="codigo" type="tipoCodigoPersona"/>
+    <xs:attribute name="sexo" type="tipoSexo"/>
+    <xs:simpleType name="tipoSexo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Home"/>
+            <xs:enumeration value="Muller"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:sequence>
+        <xs:element name="nome" type="xs:string" use="required"/>
+        <xs:element name="idade" type="tipoIdade" minOccurs="0" />
+        <xs:simpleType name="tipoIdade">
+            <xs:restriction base="xs:byte">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="110"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:sequence>
+</xs:element>
+</xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!ELEMENT musica (cd|musico)*>
+<!ELEMENT cd EMPTY>
+<!ATTLIST cd
+    titulo CDATA #IMPLIED
+    ano CDATA #IMPLIED
+    interprete CDATA #IMPLIED
+>
+<!ELEMENT musico (nomeArtistico|tipo|instrumento)*>
+<!ATTLIST musico
+    codigo CDATA #IMPLIED
+>
+<!ELEMENT nomeArtistico (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT instrumento (#PCDATA)>

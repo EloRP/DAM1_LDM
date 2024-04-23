@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="UD4_T2B_tarefa2C_EloyRodalPérez.xsd">
+    <de>Ana López</de>
+    <para>Carlos García</para>
+    <asunto>Solicitud de información</asunto>
+    <texto>TEXTOCARTA.</texto>
+</carta>

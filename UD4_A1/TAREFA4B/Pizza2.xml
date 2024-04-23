@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pizza xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="Pizza.xsd">
+    <tamaño>mediana</tamaño>
+    <tipo>hawaiana</tipo>
+    <nombre>Marta</nombre>
+    <apellidos>Ruiz Pérez</apellidos>
+    <teléfono>986892207</teléfono>
+    <enviar>NO</enviar>
+    <precio>9.99</precio>
+</pizza>

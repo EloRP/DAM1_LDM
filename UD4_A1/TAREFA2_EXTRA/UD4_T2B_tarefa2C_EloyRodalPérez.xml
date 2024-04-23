@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="UD4_T2B_tarefa2C_EloyRodalPérez.xsd">
+    <de>Juan Pérez</de>
+    <para>Maria González</para>
+    <asunto>Reunión</asunto>
+    <texto>TEXTOCARTA</texto>
+</carta>
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="tipotrianero">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="nacido" />
+      <xs:enumeration value="adoptado" />
+      <xs:enumeration value="residente" />
+      <xs:enumeration value="extranjero" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" minOccurs="1" maxOccurs="unbounded">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="2" />
+              <xs:maxLength value="25" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="apellido" minOccurs="2" maxOccurs="2">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="2" />
+              <xs:maxLength value="25" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="fechanacimiento" type="xs:date" maxOccurs="1" />
+        <xs:element name="numerodocumento">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9]{8}[A-Za-z]" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="trianero">
+          <xs:simpleType>
+            <xs:restriction base="tipotrianero" />
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
