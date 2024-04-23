@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<instituto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="UD4_T4A_EloyRodalPerez.xsd">
-    <alumno numExpediente="1234" nome="Juan" apelido1="García" apelido2="Pérez"/>
-    <profesor NRP="5678" nome="María" apelido1="López" apelido2="Martínez"/>
-    <alumno numExpediente="5678" nome="Ana" apelido1="Martínez" apelido2="Gómez"/>
-    <profesor NRP="9012" nome="Pedro" apelido1="Sánchez" apelido2="Rodríguez"/>
-</instituto>
