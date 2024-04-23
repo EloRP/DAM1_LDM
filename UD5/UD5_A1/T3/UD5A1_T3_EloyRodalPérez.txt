@@ -1,0 +1,11 @@
+a) //disco[@tecnoloxía="SCSI"]
+b) //máquina/config[IP="192.168.10.45"]/OS
+c) //procesador[@marca="AMD"]/@*
+d) //máquina[@nome="COPERNICO"]/config/*/text()
+e) //máquina/hardware[tipo="Semitorre"]/parent::máquina/config[OS="Windows XP"]/parent::máquina
+f) //máquina/hardware[memoria="4"]/memoria[@tecnoloxía="DDR2"]/../fabricante
+g) //máquina/hardware/procesador[@num_nucleos]/ancestor::máquina//OS
+h) //memoria[@tecnoloxía="DDR2"]/ancestor::máquina/@nome
+i) //hardware/procesador[@marca="Intel"]/../gravadora/ancestor:máquina
+   //máquina/[hardware/procesador/@marca='Intel'][hardware/gravadora/@tipo='DVD']
+j) //gateway/parent::config

@@ -1,0 +1,16 @@
+a) Selecciona los nombres de los cursos impartidos 
+//curso/@nome
+b) Selecciona los cursos que empiezan el 9 de Abril
+ //curso[@data = "Abril-09"]
+c) Selecciona los nombres de los cursos en los que hay alumnos matriculados 
+//curso[alumno]
+d) Selecciona los cursos en los que hay comentarios
+//curso[comment()]
+e) Selecciona los alumnos del curso de Mono
+//curso[@nome="Mono"]/alumno
+f) Selecciona los nombres de los alumnos de los que consta la dirección
+//alumno[enderezo]
+g) Selecciona los valores de todos los atributos del curso de C#
+//curso[@nome="C#"]/@*
+h) Selecciona la dirección del alumno de nombre Perico
+//alumno[nome="Perico"]/enderezo

@@ -1,0 +1,12 @@
+a) /equipos/máquina
+
+b) /equipos/máquina/hardware
+
+c) /equipos/máquina/config
+
+d) /equipos/máquina/hardware/fabricante
+
+e) /equipos/máquina/hardware/disco
+
+f) /equipos/máquina/config/IP
+

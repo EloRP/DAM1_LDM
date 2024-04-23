@@ -1,0 +1,5 @@
+a) //comment()
+b) //película[título="Leaving Las Vegas"]/comment()
+c) //película[xénero="Drama"]
+d) //actor[sexo="muller"]/nome
+e) //*[text()]

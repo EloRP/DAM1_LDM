@@ -1,0 +1,10 @@
+a) /child::equipos/child::máquina/attribute::nome
+   /descendant::equipos/child::máquina/attribute::nome
+   /descendant-or-self::equipos/child::máquina/attribute::nome
+   /equipos/máquina/@nome
+
+b) /child::equipos/child::máquina/child::hardware/child::gravadora
+   /descendant-or-self::equipos/child::máquina/child::hardware/child:gravadora/    parent::hardware/parent::máquina/attribute:nome
+   /equipos/máquina/hardware/gravadora/../../@nome
+   
+c) /equipos/maquina/config/role/parent::config/OS

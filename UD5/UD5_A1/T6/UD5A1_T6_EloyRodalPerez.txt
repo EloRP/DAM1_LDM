@@ -1,0 +1,27 @@
+a.) As películas nas que o título sexa igual ao título orixinal.
+
+//película[título = títuloorixinal]
+
+b) O atributo "id" correspondente á actriz "Elisabeth Shue".
+
+//actor[nome = "Elisabeth Shue"]/@id
+
+c) Os títulos das películas nas que participou o actor con atributo id=51.
+
+//película/actúa[@id = "51"]/..
+
+d) Baseándote nos dous resultados anteriores, escribe a expresión correspondente aos títulos das películas nas que participou a actriz de nome "Elisabeth Shue".
+
+//película/actúa[@id = "51"]/../título
+
+e) O título da última película que aparece no documento.
+
+//película[last()]/título
+
+f) A suma dos importes daquelas películas nas que o mesmo figura en dólares.
+
+sum(//película[importe/@moneda = "dólar"]/importe)
+
+g) A suma en euros dos importes das películas, considerando un cambio de 1€ = 1,4$.
+
+sum(//película[importe/@moneda = "dólar"]/importe) * 1.4

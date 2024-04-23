@@ -1,0 +1,61 @@
+a) Indica cuantos alumnos tiene el curso de C#
+
+count(//curso[@nome="C#"]/alumno)
+
+b) Haz una expresión que devuelva el nombre de la empresa junto con el total de alumnos matriculados. El resultado se debe mostrar separado con un guión: (Xunta de Galicia – 6)
+
+concat(//nomeEmpresa, ' - ', sum(//curso/count(alumno)))
+
+
+c) Selecciona los cursos de los que no se sabe el nivel
+
+//curso[not(@nivel)]
+
+d) Selecciona el texto del nombre del último alumno matriculado en el curso de Java
+
+//curso[@nome="Java"]/alumno[last()]/nome/text()
+
+e) Selecciona el nombre y apellidos del último alumno matriculado en el curso de Java de la forma “Faustino Rodríguez”
+
+concat(//curso[@nome="Java"]/alumno[last()]/nome/text(), " ", //curso[@nome="Java"]/alumno[last()]/apelido/text())
+
+f) Selecciona los nombres de los cursos en los que no hay alumnos matriculados
+
+//curso[not(alumno)]
+
+g) Selecciona los primeros alumnos de cada curso
+
+//curso/alumno[1]
+
+h) Selecciona los alumnos del último curso
+
+//curso[last()]/alumno
+
+i) Selecciona el primer alumnos del primer curso y el último alumno del penúltimo curso
+
+//curso[1]/alumno[1], ' ', //curso[last()-1]/alumno[last()]
+
+
+j) Selecciona los nombres de los cursos con nivel bajo o medio
+
+//curso[@nivel="baixo" or "medio"]
+
+k) Selecciona los nombres y apellidos de los alumnos sin dirección
+
+//curso/alumno[not(enderezo)]/concat(nome/text(), " ", apelido/text())
+
+
+l) Selecciona los nombres de los cursos que se imparten en el año 2009
+
+//curso[substring-after(@data, '-') = "09"]/@nome
+
+//curso[contains(@data, "09")]/@nome
+
+
+m) Selecciona los nombres de los cursos y los comentarios que contienen cada uno
+
+//curso/concat(@nome, " ", comment())
+
+n) Selecciona los cursos en los que esté matriculado algún alumnos sin dirección.
+
+//curso/alumno[not(enderezo)]/..
