@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="edificio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="enderezo"/>
+                <xs:element ref="dataConstrucion"/>
+                <xs:element ref="material" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="alquiler" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="verdadeiro"/>
+                        <xs:enumeration value="falso"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="valor" type="tipo_valor"/>
+            <xs:simpleType name="tipo_valor">
+                <xs:restriction base="xs:decimal">
+                    <xs:fractionDigits value = "2" />
+                </xs:restriction>             
+            </xs:simpleType>
+            <xs:element name="enderezo">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="rua" type="xs:string"/>
+                        <xs:element ref="numero" type="xs:positiveInteger"/>
+                        <xs:element ref="poboacion" type="xs:string"/>
+                        <xs:element ref="provincia" type="xs:string"/>
+                        <xs:element ref="codigoPostal"/>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="\d{5}" />
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="dataConstrucion">
+        <xs:complexType>
+            <xs:attribute name="mes" type="tipoMes" use="required" />
+            <xs:attribute name="ano" type="xs:gYear" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="xaneiro"/>
+            <xs:enumeration value="febreiro"/>
+            <xs:enumeration value="marzo"/>
+            <xs:enumeration value="abril"/>
+            <xs:enumeration value="maio"/>
+            <xs:enumeration value="xuño"/>
+            <xs:enumeration value="xullo"/>
+            <xs:enumeration value="agosto"/>
+            <xs:enumeration value="setembro"/>
+            <xs:enumeration value="outubro"/>
+            <xs:enumeration value="novembro"/>
+            <xs:enumeration value="decembro"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

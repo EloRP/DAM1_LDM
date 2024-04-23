@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<panaderias xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="UD4_T4C_EloyRodalPerez.xsd">
+<panaderia>
+        <idPanadería>1</idPanadería>
+        <domicilio>Calle Principal, 123</domicilio>
+        <telefono>645423521</telefono>
+        <telefono>986892207</telefono>
+        <pedido numPedido="p1" tipo="urgente">
+            <fecha>2024-03-06</fecha>
+            <ingrediente>
+                <idIngrediente>1</idIngrediente>
+                <ano>2024</ano>
+                <origen continente="Europa"/>
+            </ingrediente>
+            <ingrediente>
+                <idIngrediente>2</idIngrediente>
+                <ano>2024</ano>
+            </ingrediente>
+        </pedido>
+    </panaderia>
+</panaderias>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="pizza">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tamaño" type="xs:string" default="mediana" />
+                <xs:element name="tipo" type="xs:string" default="base" />
+                <!-- ingredientes adicionales -->
+                <xs:element name="extra_mozzarela" type="xs:string" default="Yes" minOccurs="0" />
+                <xs:element name="anchoas" type="xs:string" default="Yes" minOccurs="0" />
+                <xs:element name="atún" type="xs:string" default="Yes" minOccurs="0" />
+                <xs:element name="pimiento" type="xs:string" default="Yes" minOccurs="0" />
+                <xs:element name="jamón" type="xs:string" default="Yes" minOccurs="0" />
+                <!-- datos de la entrega -->
+                <xs:element name="nombre" type="xs:string" />
+                <xs:element name="apellidos" type="xs:string" />
+                <xs:element name="teléfono" type="xs:string" minOccurs="0" />
+                <xs:element name="enviar" type="xs:string" default="SI" />
+                <xs:element name="dirección" type="xs:string" minOccurs="0" />
+                <xs:element name="precio" type="xs:decimal" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

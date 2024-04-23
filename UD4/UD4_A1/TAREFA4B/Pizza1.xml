@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pizza xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Pizza.xsd">
+    <tamaño>grande</tamaño>
+    <tipo>vegetariana</tipo>
+    <extra_mozzarela>No</extra_mozzarela>
+    <anchoas>Yes</anchoas>
+    <atún>No</atún>
+    <pimiento>Yes</pimiento>
+    <jamón>No</jamón>
+    <nombre>Carlos</nombre>
+    <apellidos>García López</apellidos>
+    <teléfono>123456789</teléfono>
+    <enviar>SI</enviar>
+    <dirección>Calle Ejemplo, 123</dirección>
+    <precio>12.50</precio>
+</pizza>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="modulo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="duracion"/>
+                <xs:element name="nome" type="xs:string"/>
+                <xs:element ref="ciclo" maxOccurs="unbounded"/>
+                <xs:element ref="contidos"/>
+            </xs:sequence>
+            <xs:attribute name="codigo" type="tipoCodigo" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="contidos">
+    <xs:complexType>
+    <xs:sequence>
+        <xs:element name="UD">
+            <xs:complexType>
+                <xs:sequence>
+                <xs:element name="titulo" type="tipoNomeLongo" />
+                <xs:element name="descrición" type="tipoNomeLongo" minOccurs = "0"/>
+                </xs:sequence>
+                <xs:attribute name="num" type="xs:unsignedByte" use="required" />
+                <xs:attribute name="sesións" type="xs:unsignedByte" use="required" />
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+
+    <xs:attribute name="codigo" type="tipoCodigo" />
+    </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="tipoCodigo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="MP\d{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoNomeLongo">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="150"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

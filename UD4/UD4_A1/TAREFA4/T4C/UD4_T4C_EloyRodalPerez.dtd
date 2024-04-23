@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!ELEMENT panaderias (panaderia)*>
+<!ELEMENT panaderia (idPanadería|domicilio|telefono|pedido)*>
+<!ELEMENT idPanadería (#PCDATA)>
+<!ELEMENT domicilio (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT pedido (fecha|ingrediente)*>
+<!ATTLIST pedido
+    numPedido CDATA #IMPLIED
+    tipo CDATA #IMPLIED
+  >
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT ingrediente (idIngrediente|ano|origen)*>
+<!ELEMENT idIngrediente (#PCDATA)>
+<!ELEMENT ano (#PCDATA)>
+<!ELEMENT origen EMPTY>
+<!ATTLIST origen
+    continente CDATA #IMPLIED
+  >

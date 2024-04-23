@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="modulo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="duracion">
+                    <xs:complexType>
+                        <xs:attribute name="horas" type="xs:unsignedshort" />
+                        <xs:attribute name="sesions" type="xs:unsignedshort" />
+                        <xs:attribute name="sesionsSemanais" type="xs:unsignedByte" use="required"/>
+                        <xs:attribute name="sesionsAnuais" type="xs:unsignedByte" minOccurs="0" />
+                    </xs:complexType>             
+                </xs:element>
+                <xs:element name="ciclo" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="codigo" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="contidos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="UD">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="titulo" type="xs:string" use="required" />
+                                        <xs:element name="descricion" type="xs:string" minOccurs="0" />
+                                    </xs:sequence>   
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:attribute name="num" type="xs:unsignedByte" use="required" />
+                            <xs:attribute name="sesións" type="xs:usnignedShort" use="required" />              
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

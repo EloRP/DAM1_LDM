@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<xs:schema>  
+    <xs:simpleType name="tipoNomeApelido">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([A-Z][a-z]+)+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipoNumExpediente">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{3,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipoNRP">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{3,4}[A-E][0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="tipoNome">
+        <xs:simpleContent>
+            <xs:extension base="tipoNomeApelido">
+                <xs:attribute name="numExpediente" type="tipoNumExpediente" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="tipoApelido">
+        <xs:simpleContent>
+            <xs:extension base="tipoNomeApelido"/>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="tipoAlumno">
+        <xs:simpleContent>
+            <xs:extension base="tipoNomeApelido">
+                <xs:attribute name="numExpediente" type="tipoNumExpediente" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="tipoProfesor">
+        <xs:simpleContent>
+            <xs:extension base="tipoNomeApelido">
+                <xs:attribute name="NRP" type="tipoNRP" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="instituto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="alumno" type="tipoAlumno"/>
+                    <xs:element name="profesor" type="tipoProfesor"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
