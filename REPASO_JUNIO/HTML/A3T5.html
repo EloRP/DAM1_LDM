@@ -1,0 +1,229 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>Exercicio4_css.html</title>
+
+ <style type="text/css">
+    /* Todos los elementos de la pagina */
+	
+	*	{ 
+		font: 1em/1.3 Arial, Helvetica, sans-serif; 
+		}
+	
+    /* Todos los párrafos de la pagina */
+	
+	p 	{ 
+		color: #555; 
+		}
+
+    /* Todos los párrafos contenidos en #primero */
+	
+    #primero p { 
+		color: #336699; 
+				}
+
+    /* Los elementos "em" contenidos en #primero */
+
+	#primero em	{ 
+		background: #FFFFCC; 
+		padding: .1em; 
+				}
+    
+	/* Todos los elementos "em" de clase "especial" en toda la pagina */
+	
+	em.especial { 
+	background: #FFCC99; 
+	border: 1px solid #FF9900; 
+	padding: .1em; 
+				 }
+
+     
+	/* Elementos "span" contenidos en .normal */
+    
+	.normal span { 
+	font-weight: bold; 
+				 }
+	
+	/* Todos los elementos em estarán en cursiva */
+	em {
+	font-style: italic;
+	}
+
+	/* Todos los encabezados deben tener un separadas las palabras 0,5em */
+	h1, h2, h3 {
+	word-spacing: 0.5em;
+	}
+
+	
+	/* los encabezados h1 y h2 deben tener las letras separadas 0.2em */
+	h1, h2 {
+	letter-spacing: 0.2em;
+	}
+	
+	/* El encabezado h1 tendrá como tipo de letra "Arial Narrow", 3 veces su tamaño normal, en negrita y
+	   todas las letras en mayúsculas pero las minúsculas más pequeñas */
+	h1 {
+	font-family: "Arial Narrow";
+	font-size: 3em;
+	font-weight: bold;
+	font-variant: small-caps;
+	}
+
+	/* La letra del encabezado h2 tendrá el doble de su tamaño y estarán escritos de derecha a izquierda */
+	h2 {
+	font-size: 2em;
+	direction: rtl;
+	}
+		
+	/* El encabezado h2 que está a continuación del encabezado h1 tendrá color seagreen*/
+	h1+h2 {
+	color: seagreen;
+	}
+
+	
+	/* Los encabezados h2 que vienen después de un div tendrán color darkolivegreen */
+	div+h2 {
+	color:darkolivegreen;
+	}
+
+	/* Los encabezados h3 serán de color darkred y tendrán la primera letra de cada palabra en may�scula*/
+	h3 {
+	color:darkred;
+	text-transform:capitalize;
+	}
+		
+   /* Los div que están a continuación de los encabezados h3 tendrán el texto justificado */
+	h3+div {
+	text-align: justify;
+	}
+	
+	
+	/* Ningún texto de enlace debe estar subrayado */
+	a {
+	text-decoration: none;
+	}
+	
+	
+	/* Los div que pertenecen a alguna clase deben tener color de fondo bisque*/
+	div[class] {
+	background-color: bisque;
+	}
+	
+	
+	/* Todos los enlaces con Garajonay en cualquier parte de la URL sin distinguir entre mayúsculas y minúsculas 
+	   deben estar en cursiva */
+	a[href*="Garajonay"] {
+	font-style: italic;
+	}
+	
+	   
+	/* Los párrafos de clase natural que siguen a otro párrafo serán en color coral y tendrán una sangría de 1.4em */
+	p+p.natural {
+	color: coral;
+	text-indent: 1.4em;
+	}
+	
+  
+	/* Los elementos que tienen un atributo class que termina en "al" tendrán el texto justificado */
+	[class$="al"] {
+	text-align: justify;
+	}
+	
+	
+	/* EJERCICIO */
+	/* Enlaces internos en grey al no ser visitados y maroon cuando sí */
+	a:link {
+	color: grey;
+	}
+	
+	a:visited {
+	color:maroon;
+	}
+	
+	/* Enlaces en chocolate al pulsar y con fondo blueviolet al hacer "hover", letra blanca, más grande, y en mayús. */
+	
+	a:active {
+	color: chocolate;
+	}
+	
+	a:hover#menu {
+	background-color:blueviolet;
+	color:white;
+	font-size: 2em;
+	text-transform: uppercase;
+	}
+	
+	
+ 
+ </style>
+</head>
+
+<body>
+
+
+	<h1>La Gomera</h1>
+	<p><a id="menu" href="#Playas">Playas</a></p>
+	<p><a id="menu" href="#Garajonay">Parque nacional de Garajonay</a></p>
+	<p><a id="menu" href="#EspaciosNaturales">Espacios naturales</a></p>
+
+	<h2><a id="Playas">Playas</a></h2>
+	<div id="primero">
+		<p>La mayoría de las playas de <em>La Gomera</em> son de arena negra volcánica, 
+		pero podremos encontrar facilmente playas con arena blanca, </p>
+	 
+	</div>
+	 
+	<div class="normal">
+			<p>En <span>Valle Gran Rey</span> encontraremos algunas de las playas más bonitas de toda La Gomera, 
+		   por lo general suelen ser de arena negra de origen volcánico y gravilla, además, al estar todas 
+		   en la costa suroeste de <span>La Gomera</span> suelen tener un oleaje moderado</p>
+		 
+			<p class="natural">Playa de La Negra es una preciosa cala situada en el <em class="especial">municipio de Alajeró</em>, 
+		   en la costa Sur de La Gomera. </p>
+		 
+			<p>Charco del Conde es una <em class="especial">piscina natural</em> en donde, gracias a los arrecifes que permiten una pequeña 
+			entrada del agua, se crea una preciosa laguna. Esta playa es una de las más visitadas por los turistas, 
+			su nombre tiene una pequeña historia, ya que se dice que es aquí donde el Conde Hernan Peraza pasaba 
+			sus mejores momentos de ocio, además también se dice que este fue el lugar donde dicho Conde de La Gomera 
+			vivió una apasionante historia de amor con un trágico desenlace. </p>
+	</div>
+	<h2><a id="Garajonay">Parque nacional de Garajonay</a></h2> 
+	<div class="normal">
+		<p>El <span>Parque Nacional de Garajonay</span> debe su nombre a la leyenda
+		   de los amantes Gara, princesa gomera y Jonay de Tenerife 
+		   quienes ante la desaprobación de su amor por sus familiares, 
+		   decidieron clavarse una lanza de madera y tirarse desde el 
+		   pico más alto de la isla.</p>
+		 <p>Garajonay está formado por una tupida selva conformada por 
+		 diferentes especies vegetales, envuelta frecuentemente por un 
+		 mar de nubes que confiere al bosque un aspecto mágico. 
+		 Estas nieblas, cuya carga de humedad es interceptada por el 
+		 propio bosque son esenciales para su propia supervivencia en un 
+		 territorio insular dominado por la aridez. Este bosque, siempre 
+		 verde, recibe el nombre de <em>laurisilva</em>, que significa selva de 
+		 laureles, ya que la mayor parte de especies arbóreas que la 
+		 componen presentan hojas similares a las del laurel, y cuya 
+		 existencia está ligada una elevada humedad y temperaturas 
+		 suaves con escasas oscilaciones durante el año.</p> 
+		 <a href="http://www.gobiernodecanarias.org/parquesnacionalesdecanarias/es/Garajonay/">más info...</a>
+	   
+	</div>
+	<h2><a id="EspaciosNaturales">Espacios naturales</a></h2>
+	<div>
+		<h3>Acantilados de Alajeró</h3>
+		<div>
+		 <p>Espacio de difícil acceso desde la tierra y notable belleza desde el mar, 
+		  caracterizado por la presencia de algunas especies botánicas y de cierta fauna</p>
+		</div>
+		<h3>Monumento Natural del Barranco del Cabrito</h3>
+		<div>
+		<p>El Monumento Natural del Barranco del Cabrito ocupa las zonas medias y baja del barranco del mismo nombre, 
+		   en el término de San Sebastián, en un área de semisotavento, por lo que predomina 
+		   la vegetación xerófila y de costa con abundantes euforbias y algunos palmerales.</p>
+		<p class="natural">En su conjunto, conforma una estructura geomorfológica profundamente desmantelada por la erosión.<br /> 
+		    En las zonas de Vegaipalay Jerduñe, la presencia humana armoniza con el entorno sin desvirtuar 
+			un paisaje de tinte tradicional añadiendo al mismo elementos culturales de interés.</p>
+		</div>
+	</div>
+</body>
+</html>

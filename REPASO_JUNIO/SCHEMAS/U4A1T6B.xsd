@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"  xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="reinados">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="reinado" type="tipoReinado" maxOccurs="unbounded"/>
+                <xs:element name="persoa" type="tipoPersoa" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="monarca">
+            <xs:selector xpath="persoa"/>
+            <xs:field xpath="@codigo"/>
+        </xs:key>
+        
+        <xs:keyref name="refRei" refer="monarca">
+            <xs:selector xpath="rei"/>
+            <xs:field xpath="rei/@codigo"/>
+        </xs:keyref>
+        
+        <xs:keyref name="refRaiña" refer="monarca">
+            <xs:selector xpath="raiña"/>
+            <xs:field xpath="raiña/@codigo"/>
+        </xs:keyref>
+        
+        <xs:keyref name="refPai" refer="monarca">
+            <xs:selector xpath="pai"/>
+            <xs:field xpath="pai"/>
+        </xs:keyref>
+        
+        <xs:keyref name="refNai" refer="monarca">
+            <xs:selector xpath="nai"/>
+            <xs:field xpath="nai"/>
+        </xs:keyref>
+        
+        <xs:unique name="personaUnica">
+            <xs:selector xpath="persoa"/>
+            <xs:field xpath="nome"/>
+        </xs:unique>
+    </xs:element>
+    
+    <xs:complexType name="tipoReinado">
+        <xs:sequence>
+            <xs:element name="rei" type="tipoMonarca" minOccurs="0"/>
+            <xs:element name="raiña" type="tipoMonarca" minOccurs="0"/>
+            <xs:element name="consorte" type="tipoConsorte" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="grupoReinado"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tipoMonarca">
+        <xs:attribute name="codigo" type="tipoCodigo"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tipoConsorte">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attributeGroup ref="grupoReinado"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:simpleType name="tipoCodigo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{2}\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:attributeGroup name="grupoReinado">
+        <xs:attribute name="dende" type="xs:date" use="required"/>
+        <xs:attribute name="ata" type="xs:date" use="required"/>
+    </xs:attributeGroup>
+    
+    
+    <xs:complexType name="tipoPersoa">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string" />
+            <xs:element name="apodo" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element name="pai" type="tipoCodigo" minOccurs="0"/>
+            <xs:element name="nai" type="tipoCodigo" minOccurs="0"/>
+            <xs:element name="casa" type="tipoCasa"/>
+        </xs:sequence>
+        <xs:attribute name="codigo" type="tipoCodigo"/>
+    </xs:complexType>
+    
+    <xs:simpleType name="tipoCasa">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Bonaparte"/>
+            <xs:enumeration value="Borbón"/>
+            <xs:enumeration value="Saboya"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

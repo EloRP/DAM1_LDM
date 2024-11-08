@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="2BBA1.xsd">
+    <persona>
+        <nombre>Juan</nombre>
+        <apellido>Pérez</apellido>
+        <fechanacimiento>1980-01-15</fechanacimiento>
+        <numerodocumento>12345678</numerodocumento>
+        <trianero>true</trianero>
+    </persona>
+    <persona>
+        <nombre>María</nombre>
+        <apellido>González</apellido>
+        <fechanacimiento>1992-07-30</fechanacimiento>
+        <numerodocumento>87654321</numerodocumento>
+        <trianero>false</trianero>
+    </persona>
+    <persona>
+        <nombre>Carlos</nombre>
+        <apellido>Lopez</apellido>
+        <fechanacimiento>1985-03-20</fechanacimiento>
+        <numerodocumento>11223344</numerodocumento>
+        <trianero>true</trianero>
+    </persona>
+</personas>

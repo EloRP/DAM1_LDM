@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:include schemaLocation="4AA1_INCLUDE.xsd"/>
+    <xs:element name="instituto">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="alumno" type="tipoAlumno" maxOccurs="unbounded"/>
+                <xs:element name="profesor" type="tipoProfesor" maxOccurs="unbounded"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="tipoAlumno">
+        <xs:sequence>
+            <xs:element name="altura" type="tipoAltura"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="datosPersona"/>
+    </xs:complexType>
+    
+    <xs:simpleType name="tipoAltura">
+        <xs:union memberTypes="tipoAlturaNumerico tipoAlturaTexto"/>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipoAlturaTexto">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Alto"/>
+            <xs:enumeration value="Baixo"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipoAlturaNumerico">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="21"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="tipoProfesor">
+        <xs:attribute name="NRP" type="tipoNRP"/>
+        <xs:attributeGroup ref="datosPersona"/>
+    </xs:complexType>
+    
+    <xs:simpleType name="tipoNRP">
+        <xs:restriction  base="xs:string">
+            <xs:pattern value="\d{3,4}[A-E]\d{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

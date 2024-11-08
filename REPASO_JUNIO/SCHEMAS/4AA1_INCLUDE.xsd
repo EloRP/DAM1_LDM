@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+    <xs:attributeGroup name="datosPersona">
+        <xs:attribute name="numExpedente" type="tipoNumExpedente"/>
+        <xs:attribute name="nome" type="tipoNomeApelidos"/>
+        <xs:attribute name="apelido1" type="tipoNomeApelidos"/>
+        <xs:attribute name="apelido2" type="tipoNomeApelidos"/>
+    </xs:attributeGroup>
+    
+    <xs:simpleType name="tipoNumExpedente">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{3,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipoNomeApelidos">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+( [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*"/>
+            <xs:maxLength value="50"/>
+            <xs:whiteSpace value="replace"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

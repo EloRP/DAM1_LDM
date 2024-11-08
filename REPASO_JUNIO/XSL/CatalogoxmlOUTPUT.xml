@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><Material>
+    <!--Tipo: Portátiles-->
+    <Equipo marca="TOSH">Toshiba Satellite A300-203</Equipo>
+    <Características>Core2 Duo T6400 a 2 GHz3 GB (1024 + 2048)320 GB SATA 5400 rpmTruBrite WXGA TFT 15,4" 1.280 x 800Ethernet 10/100802.11a/b/g</Características>
+    <!--Tipo: Portátiles-->
+    <Equipo marca="TOSH">Toshiba Satellite U400-200</Equipo>
+    <Características>Core2 Duo P8400 a 2,26 GHz4 GB (2048 + 2048)320 GBTruBrite WXGA TFT 13,3" 1.280 x 800Ethernet 10/100802.11a/b/g</Características>
+    <!--Tipo: Portátiles-->
+    <Equipo marca="ACER">Acer Extensa 5630Z</Equipo>
+    <Características>Dual-Core T34004 GB (2048 + 2048)320 GB 5400rpm15,4" WXGA CristalBrite 1.280 x 800Ethernet 10/100/1000802.11b/g/n</Características>
+    <!--Tipo: Monitores-->
+    <Equipo marca="ASUS">Asus VH222S</Equipo>
+    <Características>21.5"1920 x 10805 msDSub</Características>
+    <!--Tipo: Monitores-->
+    <Equipo marca="ASUS">Asus VH242H</Equipo>
+    <Características>23.6"1920 x 10805 msDSub / DVI-D / HDMI</Características>
+    <!--Tipo: Monitores-->
+    <Equipo marca="ACER">Acer X243HQBD</Equipo>
+    <Características>23.6"1920 x 10805 msDSub / DVI-D</Características>
+</Material>

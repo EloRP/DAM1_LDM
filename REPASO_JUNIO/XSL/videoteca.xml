@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<Videoteca data_creación="2009-02-24" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="T02Exer01_02_Pelicula.xsd">
+	<Película id="_1">
+		<Título>El santo</Título>
+		<TítuloOrixinal>The Saint</TítuloOrixinal>
+		<Ano>1997</Ano>
+		<Director>Phillip Noyce</Director>
+		<Xénero>Acción</Xénero>
+		<Duración>111</Duración>
+		<Actor principal="SI" sexo="hombre">
+			<Nome>Val Kilmer</Nome>
+			<!-- Temos que cambiar o formato do elemento DataNacemento a aaaa-mm-dd -->
+			<DataNacemento>1959-12-31</DataNacemento>
+		</Actor>
+		<!--  Elisabeth Shue -->
+		<Actor principal="NO" id="51"/>
+	</Película>
+	<Película id="_2">
+		<Título>¿Teléfono rojo? Volamos hacia Moscú</Título>
+		<TítuloOrixinal>Dr. Strangelove, or How I Learned to Stop Worrying and Love the Bomb</TítuloOrixinal>
+		<Ano>1963</Ano>
+		<Director>Stanley Kubrick</Director>
+		<Duración>90</Duración>
+		<Actor principal="SI" sexo="hombre">
+			<Nome>Peter Sellers</Nome>
+		</Actor>
+	</Película>
+	<Película id="_3">
+		<Título>Leaving Las Vegas</Título>
+		<TítuloOrixinal>Leaving Las Vegas</TítuloOrixinal>
+		<Ano>1995</Ano>
+		<Director>Mike Figgis</Director>
+		<Xénero>Drama</Xénero>
+		<Duración>107</Duración>
+		<Actor principal="SI" sexo="hombre">
+			<Nome>Nicolas Cage</Nome>
+			<DataNacemento>1964-01-07</DataNacemento>
+		</Actor>
+		<!--  Elisabeth Shue -->
+		<Actor id="51" principal="SI"/>
+		<Actor sexo="hombre">
+			<Nome>Julian Sands</Nome>
+		</Actor>
+	</Película>
+	<Película id="_4">
+		<Título>¿A quién ama Gilbert Grape?</Título>
+		<TítuloOrixinal>What's Eating Gilbert Grape?</TítuloOrixinal>
+		<Ano>1993</Ano>
+		<Director>Lasse Hallström</Director>
+		<Xénero>Drama</Xénero>
+		<Duración>118</Duración>
+		<!--  Johnny Depp  -->
+		<Actor id="139" principal="SI"/>
+		<Actor sexo="mujer">
+			<Nome>Juliette Lewis</Nome>
+		</Actor>
+	</Película>
+</Videoteca>
+

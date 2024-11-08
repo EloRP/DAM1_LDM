@@ -1,0 +1,34 @@
+h1 {
+	text-transform: uppercase;
+	color: lightgrey;
+	font-family: Arial,Helvetica,sans-serif;
+	margin-left:30px;
+	margin-top:30px;
+}
+table {
+	border: 4px solid grey;
+	   border-collapse: collapse;
+	   margin-left:10px;
+}
+th, td {
+   text-align: left;
+   vertical-align: top;
+   border: 1.5px solid lightgrey;
+   border-collapse: collapse;
+
+}
+td {
+	font-size: 14px;
+	color: #003366;
+	padding: 0.3em;
+	line-height: 1.5em;	
+}
+td.centro { text-align: center;}
+th {
+	font-size: 19px;
+	color: #666666;
+	background-color: #cdd8f6;
+	padding: 0.3em;
+	text-transform: uppercase;
+}
+

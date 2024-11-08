@@ -1,0 +1,72 @@
+* {
+	font-family: Arial;
+}
+
+h1 {
+	font-family: Arial Narrow;
+	letter-spacing: 0.2em;
+	color: maroon;
+}
+
+h2 {
+	font-family: Arial;
+	color: mediumseagreen;
+	font-variant: small-caps;
+}
+
+h2:after {
+	content: "!!!";
+}
+
+li {
+	list-style: none;
+	
+}
+
+p:first-line {
+	font-style: italic;
+	color: #444432;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: seagreen;
+	font-style: underline;
+}
+
+ul.lista1 li:nth-child(even) {
+	background-color: lightcoral;
+}
+
+ul.lista1 li:nth-child(odd) {
+	background-color: papayawhip;	
+}
+
+
+/* segunda lista */
+
+ul.lista2 li:nth-child(even) {
+	color:maroon;
+	font-size: 30px;
+}
+
+ul.lista2 li:nth-child(odd) {
+	background-color: papayawhip;
+}
+
+ul.lista2 li:first-of-type {
+	color: blue;
+}
+
+ul.lista2 li:nth-of-type(3) {
+	color: orange;
+	font-size: 1.3em;
+}
+
+ul.lista2 li:last-child {
+	color: green;
+}
